@@ -20,7 +20,9 @@ RUN npm install && npm run build
 
 # Install requirements for backend
 WORKDIR /home/
-RUN pip install pip --upgrade 
+RUN pip install pip --upgrade
+RUN pip install git+https://github.com/S2P2/MedCAT.git@test/no-ref/thai-language-support
+RUN pip install spacy-pythainlp
 RUN pip install -r requirements.txt
 ARG SPACY_MODELS="en_core_web_md"
 RUN for SPACY_MODEL in ${SPACY_MODELS}; do python -m spacy download ${SPACY_MODEL}; done
