@@ -15,6 +15,8 @@ MedCATTrainer was presented at EMNLP/IJCNLP 2019 :tada:
 ** Modified for Thai language support
 please install via $ docker-compose -f docker-compose-dev.yml up
 
+Common error --> check /webapp/run.sh file [End of line sequence change to LF]
+
 # Documentation and Discussion
 
 Official docs available [here](https://medcattrainer.readthedocs.io/en/latest/)
